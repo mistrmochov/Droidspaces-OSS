@@ -6,7 +6,7 @@
 
 # Parameters
 TARBALL="$1"
-BUSYBOX_PATH="${BUSYBOX_PATH:-/data/local/Droidspaces/bin/busybox}"
+BUSYBOX_PATH="${BUSYBOX_PATH:-/mnt/meow/Droidspaces/bin/busybox}"
 BB="$BUSYBOX_PATH"
 
 log() { $BB echo "$1" >&2; }

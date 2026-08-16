@@ -119,7 +119,6 @@ dumpsys connectivity | sed 's/}}/\n/g' | grep 'InterfaceName: wlan0' | grep -o '
 **解决方法：** 移除该参数。它位于内核配置的 `CONFIG_CMDLINE`、启动镜像头部或引导程序中。容器仍会启动；只是对应的限制会被跳过。
 
 如果 `/proc/cgroups` 中根本没有该控制器的行，说明内核是 6.12 或更新版本，并且在构建时没有包含该控制器的 cgroup v1 代码。它在 cgroup v2 上仍然存在，Droidspaces 会从那里使用它。
-
 ## 获取帮助
 
 1. 运行 `droidspaces check`，记下所有标记为缺失的项。

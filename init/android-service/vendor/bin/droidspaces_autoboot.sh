@@ -8,7 +8,7 @@
 # Copyright (C) 2026 ravindu644 <droidcasts@protonmail.com>
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-DROIDSPACE_DIR=/data/local/Droidspaces
+DROIDSPACE_DIR=/mnt/meow/Droidspaces
 LOGS_DIR=${DROIDSPACE_DIR}/Logs
 LOGS_FILE=${LOGS_DIR}/boot-module.log
 CONTAINERS_DIR=${DROIDSPACE_DIR}/Containers

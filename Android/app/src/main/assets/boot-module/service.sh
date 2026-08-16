@@ -3,7 +3,7 @@ set -o pipefail
 
 # Droidspaces Magisk Module - Boot Service
 MODDIR=${0%/*}
-DROIDSPACE_DIR=/data/local/Droidspaces
+DROIDSPACE_DIR=/mnt/meow/Droidspaces
 LOGS_DIR=${DROIDSPACE_DIR}/Logs
 LOGS_FILE=${LOGS_DIR}/boot-module.log
 CONTAINERS_DIR=${DROIDSPACE_DIR}/Containers

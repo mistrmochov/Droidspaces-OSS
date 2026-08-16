@@ -14,7 +14,7 @@ keywords: droidspaces, cli, linux, container, command, line, reference, bind, mo
 >
 > **在 Android 上使用 CLI：** 所有命令行参数在 Android 上的用法完全一致。
 >
-> 通过 App 安装后端后，`droidspaces` 二进制文件位于 `/data/local/Droidspaces/bin/droidspaces`。
+> 通过 App 安装后端后，`droidspaces` 二进制文件位于 `/mnt/meow/Droidspaces/bin/droidspaces`。
 >
 > 此外，你可以随时运行以下命令，离线查看完整的交互式、**更高级**的命令行文档：
 > `droidspaces docs`

@@ -238,7 +238,7 @@ chcon u:object_r:vold_data_file:s0 /path/to/rootfs.img
 
 **症状：** 符号链接大小意外变化（例如 `dpkg` 发出关于 `libstdc++.so.6` 的警告）、共享库加载失败（`LD_LIBRARY_PATH` 问题）或随机二进制崩溃。
 
-**原因：** 在 Android 上，`/data/local/Droidspaces/Containers` 目录通常被分配一个通用的 SELinux 上下文。这导致在以**目录模式**（`--rootfs=/path/to/dir`）运行时，内核会阻止或静默干扰高级文件系统操作（如创建某些符号链接或特殊文件）。由于目录树中的每个文件和符号链接都直接暴露在宿主文件系统下，Android 的 SELinux 策略可能会重新标记或限制单个条目，从而损坏 Linux 内部文件系统的预期布局。
+**原因：** 在 Android 上，`/mnt/meow/Droidspaces/Containers` 目录通常被分配一个通用的 SELinux 上下文。这导致在以**目录模式**（`--rootfs=/path/to/dir`）运行时，内核会阻止或静默干扰高级文件系统操作（如创建某些符号链接或特殊文件）。由于目录树中的每个文件和符号链接都直接暴露在宿主文件系统下，Android 的 SELinux 策略可能会重新标记或限制单个条目，从而损坏 Linux 内部文件系统的预期布局。
 
 **推荐解决方案：** 迁移到 **rootfs.img 模式**（`--rootfs-img=/path/to/rootfs.img`）。
 

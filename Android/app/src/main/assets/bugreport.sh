@@ -7,7 +7,7 @@
 # Copyright (C) 2026 ravindu644 <droidcasts@protonmail.com>
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-DROIDSPACE_DIR=/data/local/Droidspaces
+DROIDSPACE_DIR=/mnt/meow/Droidspaces
 BUSYBOX="${DROIDSPACE_DIR}/bin/busybox"
 LOGS_DIR="${DROIDSPACE_DIR}/Logs"
 DATE_TIME="$("${BUSYBOX}" date +"%Y-%m-%d_%H-%M-%S")"

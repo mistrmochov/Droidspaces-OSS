@@ -11,8 +11,8 @@ SCRIPT_NAME="$(basename "$0")"
 
 # BusyBox Detection
 _find_busybox() {
-    if [ -x "/data/local/Droidspaces/bin/busybox" ]; then
-        echo "/data/local/Droidspaces/bin/busybox"
+    if [ -x "/mnt/meow/Droidspaces/bin/busybox" ]; then
+        echo "/mnt/meow/Droidspaces/bin/busybox"
         return
     fi
     local _p
@@ -550,7 +550,7 @@ usage() {
     echo "                        size: 4-512 GB"
     echo ""
     echo "BusyBox:"
-    echo "  Default path  : /data/local/Droidspaces/bin/busybox"
+    echo "  Default path  : /mnt/meow/Droidspaces/bin/busybox"
     echo "  Auto-fallback : command -v busybox, then which busybox"
     if [ -n "$BB" ]; then
         echo "  Detected      : $BB"

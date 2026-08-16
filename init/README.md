@@ -15,7 +15,7 @@ Integrating Droidspaces natively into Android's `init.rc` allows for **Daemon Mo
 Choose **one** of the following methods based on your preference for flexibility vs. self-containment.
 
 ### Method A: Symlink Integration (Recommended)
-This method creates a symlink at `/vendor/bin/droidspaces` pointing to `/data/local/Droidspaces/bin/droidspaces`. This is highly recommended as it allows you to update the `droidspaces` binary via the app without re-flashing your `vendor.img`.
+This method creates a symlink at `/vendor/bin/droidspaces` pointing to `/mnt/meow/Droidspaces/bin/droidspaces`. This is highly recommended as it allows you to update the `droidspaces` binary via the app without re-flashing your `vendor.img`.
 
 1. **Unpack `vendor.img`** using the image tools.
 2. **Configure Symlink**:

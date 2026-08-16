@@ -23,7 +23,7 @@ These steps remove all container data and backend files.
 3.  **Remove backend data**:
     - With a root file manager or a terminal (Termux with root access, for example), delete this directory:
     ```bash
-    su -c "rm -rf /data/local/Droidspaces"
+    su -c "rm -rf /mnt/meow/Droidspaces"
     ```
 4.  **Uninstall the APK**: uninstall the Droidspaces app from Android settings or your launcher.
 5.  **Reboot**: disable or remove the Magisk/KernelSU `Droidspaces: Run-at-boot` module in your root manager, then reboot to clear anything Droidspaces left behind.

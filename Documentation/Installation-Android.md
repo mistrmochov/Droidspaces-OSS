@@ -26,7 +26,7 @@ On Android, Droidspaces needs no terminal. Everything from the first install to 
 On first launch, Droidspaces does an **atomic installation** of the backend:
 
 - It detects the device architecture (`aarch64`, `armhf`, etc.).
-- It extracts the `droidspaces` and `busybox` binaries to `/data/local/Droidspaces/bin`.
+- It extracts the `droidspaces` and `busybox` binaries to `/mnt/meow/Droidspaces/bin`.
 - It moves them into place atomically, so the install succeeds even while an older version is running.
 - It verifies checksums, so a corrupted binary is not installed.
 

@@ -25,7 +25,7 @@ Droidspaces 在 Android 上旨在提供"零终端"体验。从首次安装到运
 
 首次启动时，Droidspaces 会执行后端系统的**原子安装**：
 - 它会检测你的设备架构（`aarch64`、`armhf` 等）。
-- 它将 `droidspaces` 和 `busybox` 二进制文件解压到 `/data/local/Droidspaces/bin`。
+- 它将 `droidspaces` 和 `busybox` 二进制文件解压到 `/mnt/meow/Droidspaces/bin`。
 - 它执行原子移动操作，确保即使旧版本当前正在运行，二进制文件也能正确安装。
 - 它验证校验和以确保零损坏。
 

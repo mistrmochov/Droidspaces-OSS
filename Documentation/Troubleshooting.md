@@ -231,7 +231,7 @@ chcon u:object_r:vold_data_file:s0 /path/to/rootfs.img
 
 **Symptoms:** Symbolic link sizes change unexpectedly (e.g., `dpkg` warnings about `libstdc++.so.6`), shared libraries fail to load (`LD_LIBRARY_PATH` issues), or binaries crash at random.
 
-**Cause:** On Android, the `/data/local/Droidspaces/Containers` directory often gets a generic SELinux context. In **directory-based mode** (`--rootfs=/path/to/dir`), the kernel then blocks or silently interferes with some filesystem operations, such as creating certain symlinks or special files. Every file and symlink in the directory tree is exposed directly to the host filesystem, so Android's SELinux policy can relabel or restrict individual entries and corrupt the layout the Linux system inside expects.
+**Cause:** On Android, the `/mnt/meow/Droidspaces/Containers` directory often gets a generic SELinux context. In **directory-based mode** (`--rootfs=/path/to/dir`), the kernel then blocks or silently interferes with some filesystem operations, such as creating certain symlinks or special files. Every file and symlink in the directory tree is exposed directly to the host filesystem, so Android's SELinux policy can relabel or restrict individual entries and corrupt the layout the Linux system inside expects.
 
 **Recommended solution:** Move to **rootfs.img mode** (`--rootfs-img=/path/to/rootfs.img`).
 

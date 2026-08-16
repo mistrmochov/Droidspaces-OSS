@@ -15,7 +15,7 @@
 根据你对灵活性与独立性的偏好，选择以下方法中的**一种**。
 
 ### 方法 A：符号链接集成（推荐）
-此方法在 `/vendor/bin/droidspaces` 处创建一个指向 `/data/local/Droidspaces/bin/droidspaces` 的符号链接。强烈推荐此方式，因为它允许你通过 App 更新 `droidspaces` 二进制文件，而无需重新刷写 `vendor.img`。
+此方法在 `/vendor/bin/droidspaces` 处创建一个指向 `/mnt/meow/Droidspaces/bin/droidspaces` 的符号链接。强烈推荐此方式，因为它允许你通过 App 更新 `droidspaces` 二进制文件，而无需重新刷写 `vendor.img`。
 
 1. 使用镜像工具**解包 `vendor.img`**。
 2. **配置符号链接**：

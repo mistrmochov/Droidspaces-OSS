@@ -23,7 +23,7 @@ keywords: uninstall, droidspaces, remove, android, delete, rootfs, cleanup, cont
 3.  **删除后端数据**：
     - 使用具有 Root 权限的文件管理器或终端（如带有 Root 权限的 Termux），删除以下目录：
     ```bash
-    su -c "rm -rf /data/local/Droidspaces"
+    su -c "rm -rf /mnt/meow/Droidspaces"
     ```
 4.  **卸载 APK**：从你的 Android 设置或启动器中卸载 Droidspaces 应用。
 5.  **重启**：从你的 Root 管理器中禁用或移除 Magisk/KernelSU 的 `Droidspaces: Run-at-boot` 模块，然后重启以清除任何残留的 Droidspaces 相关内容。

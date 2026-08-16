@@ -6,7 +6,7 @@ package com.droidspaces.app.util
  */
 object Constants {
     // Installation paths
-    const val INSTALL_PATH = "/data/local/Droidspaces/bin"
+    const val INSTALL_PATH = "/mnt/meow/Droidspaces/bin"
     const val DROIDSPACES_BINARY_NAME = "droidspaces"
     const val BUSYBOX_BINARY_NAME = "busybox"
     const val DROIDSPACES_BINARY_PATH = "$INSTALL_PATH/$DROIDSPACES_BINARY_NAME"
@@ -14,13 +14,13 @@ object Constants {
     const val MAGISK_MODULE_PATH = "/data/adb/modules/droidspaces"
 
     // Container paths
-    const val CONTAINERS_BASE_PATH = "/data/local/Droidspaces/Containers"
+    const val CONTAINERS_BASE_PATH = "/mnt/meow/Droidspaces/Containers"
     const val MODULE_SYSTEM_BIN_PATH = "$MAGISK_MODULE_PATH/system/bin"
     const val SYSTEM_BIN_SYMLINK_PATH = "$MODULE_SYSTEM_BIN_PATH/$DROIDSPACES_BINARY_NAME"
     const val KEY_SYMLINK_ENABLED = "symlink_enabled"
 
-    const val DAEMON_MODE_FILE = "/data/local/Droidspaces/.daemon_mode"
-    const val DAEMON_PID_FILE = "/data/local/Droidspaces/droidspacesd.pid"
+    const val DAEMON_MODE_FILE = "/mnt/meow/Droidspaces/.daemon_mode"
+    const val DAEMON_PID_FILE = "/mnt/meow/Droidspaces/droidspacesd.pid"
     const val CONTAINER_CONFIG_FILE = "container.config"
     // Default network mode, the single source of truth for both the ContainerInfo
     // model default and the config parser default (they used to disagree).

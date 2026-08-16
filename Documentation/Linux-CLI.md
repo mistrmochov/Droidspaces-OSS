@@ -14,7 +14,7 @@ Complete guide to using Droidspaces from the command line on Linux.
 >
 > **Using the CLI on Android:** All command-line arguments work exactly the same on Android.
 >
-> Once the backend is installed via the app, the `droidspaces` binary is located at `/data/local/Droidspaces/bin/droidspaces`.
+> Once the backend is installed via the app, the `droidspaces` binary is located at `/mnt/meow/Droidspaces/bin/droidspaces`.
 >
 > Also, you can view the full interactive, **more advanced** command-line documentation offline at any time by running:
 > `droidspaces docs`

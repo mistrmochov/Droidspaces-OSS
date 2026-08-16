@@ -233,7 +233,7 @@ fun TerminalConsole(
                     logs.forEach { (level, message) ->
                         val annotatedText = remember(message) {
                             val processedMessage = message.replace(
-                                Regex("""/data/local/Droidspaces/bin/droidspaces"""),
+                                Regex("""/mnt/meow/Droidspaces/bin/droidspaces"""),
                                 "droidspaces"
                             )
 

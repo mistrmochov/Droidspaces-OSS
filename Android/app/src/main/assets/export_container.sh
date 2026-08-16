@@ -10,7 +10,7 @@
 
 set -e
 
-DS_PATH="/data/local/Droidspaces"
+DS_PATH="/mnt/meow/Droidspaces"
 CONTAINERS_BASE_PATH="${DS_PATH}/Containers"
 BUSYBOX_PATH="${DS_PATH}/bin/busybox"
 

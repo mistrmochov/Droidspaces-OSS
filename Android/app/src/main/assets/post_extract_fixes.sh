@@ -13,7 +13,7 @@ set -e
 
 # Parameters
 ROOTFS_PATH="$1"
-BUSYBOX_PATH="${BUSYBOX_PATH:-/data/local/Droidspaces/bin/busybox}"
+BUSYBOX_PATH="${BUSYBOX_PATH:-/mnt/meow/Droidspaces/bin/busybox}"
 
 # Check if BusyBox exists
 if [ ! -x "$BUSYBOX_PATH" ]; then

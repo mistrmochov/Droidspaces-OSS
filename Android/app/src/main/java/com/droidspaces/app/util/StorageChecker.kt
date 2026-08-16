@@ -8,7 +8,7 @@ object StorageChecker {
     private const val BUSYBOX_PATH = Constants.BUSYBOX_BINARY_PATH
 
     /**
-     * Check available space in /data partition.
+     * Check available space in /mnt/meow partition.
      * Returns free space in GB, or null if unable to determine.
      *
      * Performance: ~10-50ms (runs in background)
@@ -16,7 +16,7 @@ object StorageChecker {
     suspend fun getFreeSpaceGB(): Int? = withContext(Dispatchers.IO) {
         try {
             // Try using stat first (more accurate)
-            val statResult = Shell.cmd("stat -f -c '%a %S' /data 2>&1").exec()
+            val statResult = Shell.cmd("stat -f -c '%a %S' /mnt/meow 2>&1").exec()
             if (statResult.isSuccess && statResult.out.isNotEmpty()) {
                 val parts = statResult.out[0].trim().split(" ")
                 if (parts.size == 2) {
@@ -30,7 +30,7 @@ object StorageChecker {
             }
 
             // Fallback: use busybox df
-            val dfResult = Shell.cmd("$BUSYBOX_PATH df /data 2>&1 | $BUSYBOX_PATH tail -n1 | $BUSYBOX_PATH awk '{print \$4}'").exec()
+            val dfResult = Shell.cmd("$BUSYBOX_PATH df /mnt/meow 2>&1 | $BUSYBOX_PATH tail -n1 | $BUSYBOX_PATH awk '{print \$4}'").exec()
             if (dfResult.isSuccess && dfResult.out.isNotEmpty()) {
                 val freeKB = dfResult.out[0].trim().toLongOrNull()
                 if (freeKB != null && freeKB > 0) {

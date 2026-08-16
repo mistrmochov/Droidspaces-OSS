@@ -47,7 +47,7 @@ object ContainerInstaller {
             logger.i("Checking available storage space...")
             val freeGB = StorageChecker.getFreeSpaceGB()
             if (freeGB != null) {
-                logger.i("/data partition has ${freeGB}GB free space")
+                logger.i("/mnt/meow partition has ${freeGB}GB free space")
                 val requiredGB = if (config.useSparseImage) {
                     (config.sparseImageSizeGB ?: 8) + Constants.MIN_STORAGE_GB
                 } else {

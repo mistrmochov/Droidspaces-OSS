@@ -25,7 +25,7 @@ Droidspaces on Android is designed to be a "Zero Terminal" experience. From the 
 
 On the first launch, Droidspaces performs an **Atomic Installation** of the backend system:
 - It detects your device architecture (`aarch64`, `armhf`, etc.).
-- It extracts the `droidspaces` and `busybox` binaries to `/data/local/Droidspaces/bin`.
+- It extracts the `droidspaces` and `busybox` binaries to `/mnt/meow/Droidspaces/bin`.
 - It performs an atomic move to ensure the binaries are installed correctly even if an older version is currently running.
 - It verifies checksums to ensure zero corruption.
 

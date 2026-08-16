@@ -83,7 +83,7 @@
 #define DS_REBOOT_EXIT 249          /* exit code: in-container reboot */
 
 /* Workspace paths */
-#define DS_WORKSPACE_ANDROID "/data/local/Droidspaces"
+#define DS_WORKSPACE_ANDROID "/mnt/meow/Droidspaces"
 #define DS_WORKSPACE_LINUX "/var/lib/Droidspaces"
 #define DS_CONTAINERS_DIR "Containers"
 #define DS_PIDS_SUBDIR "Pids"

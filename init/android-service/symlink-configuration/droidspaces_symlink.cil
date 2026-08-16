@@ -16,7 +16,7 @@
 ; which is labeled droidspacesd_exec
 (allow init droidspacesd_exec (lnk_file (read getattr)))
 
-; Allow init to execute the resolved binary at /data/local/Droidspaces/bin/droidspaces
+; Allow init to execute the resolved binary at /mnt/meow/Droidspaces/bin/droidspaces
 ; which is labeled system_data_file
 (allow init system_data_file (file (read getattr open execute map)))
 

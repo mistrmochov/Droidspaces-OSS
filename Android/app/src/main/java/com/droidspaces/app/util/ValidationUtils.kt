@@ -8,7 +8,7 @@ import com.droidspaces.app.R
  * All validation logic in one place for consistency and maintainability.
  */
 object ValidationUtils {
-    const val MAX_CONTAINER_NAME_LENGTH = 17  // 63 - len("/data/local/Droidspaces/Containers/") - len("/rootfs.img")
+    const val MAX_CONTAINER_NAME_LENGTH = 17  // 63 - len("/mnt/meow/Droidspaces/Containers/") - len("/rootfs.img")
 
     /**
      * Normalizes a container name before it is stored or used to build paths.

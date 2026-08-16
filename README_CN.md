@@ -213,7 +213,7 @@ Droidspaces 的设计目标是原生运行在任何搭载 Linux 内核的设备�
 | **挂载隔离** | **完全** | 完全 | 完全 | 无 | 无 |
 | **IPC / UTS / Cgroup 隔离** | **完全** | 完全 | 完全 | 无 | 无 |
 | **Android 端容器持久性** | **真正的不可终止。存活超过 15 天。完全免疫开发者选项中的"不保留活动"和"无后台进程"。** | 低（会被 Android LMK / 电池优化杀死） | 低（被 Android LMK / 电池优化杀死） | 低（会被 Android LMK / 电池优化杀死） | 低（被 Android LMK / 电池优化杀死） |
-| **数据持久性（应用卸载）** | **零数据丢失。所有容器、配置和数据保存在 `/data/local/Droidspaces`，完全独立于应用。二进制和守护进程在自己的进程会话中运行（`setsid`），与应用的进程组分离。卸载应用不会停止任何东西，也不会删除任何数据。** | 卸载 Termux 后一切消亡。LXC 配置和 rootfs 存储在 Termux 内部（`/data/data/com.termux`），卸载 Termux 会清除一切。 | 卸载 Termux 后一切消亡。`/data/docker` 中的容器数据保留，但若不重新安装整套工具链则无法访问。 | 若 rootfs 在 `/data/local/` 中则安全。若存储在 Termux 主目录内则不安全。 | 卸载 Termux 后一切消亡。PRoot rootfs 通常位于 `/data/data/com.termux`，卸载 Termux 时一并删除。 |
+| **数据持久性（应用卸载）** | **零数据丢失。所有容器、配置和数据保存在 `/mnt/meow/Droidspaces`，完全独立于应用。二进制和守护进程在自己的进程会话中运行（`setsid`），与应用的进程组分离。卸载应用不会停止任何东西，也不会删除任何数据。** | 卸载 Termux 后一切消亡。LXC 配置和 rootfs 存储在 Termux 内部（`/data/data/com.termux`），卸载 Termux 会清除一切。 | 卸载 Termux 后一切消亡。`/data/docker` 中的容器数据保留，但若不重新安装整套工具链则无法访问。 | 若 rootfs 在 `/data/local/` 中则安全。若存储在 Termux 主目录内则不安全。 | 卸载 Termux 后一切消亡。PRoot rootfs 通常位于 `/data/data/com.termux`，卸载 Termux 时一并删除。 |
 | **开机自启** | **支持（原生 `init.rc` / `service.d`）。即使手机锁定、`/data` 加密，甚至在任何用户应用启动之前，即可自动启动容器。** | 不支持 | 不支持 | 不支持 | 不支持 |
 | **Android 端网络隔离** | **同类首创。完整的 NAT/Veth + 互联网访问开箱即用。无需手动配置。** | 仅主机网络模式下互联网可用（`lxc.net.0.type = none`）。真正的网络隔离（veth + NAT）通常需要手动设置网桥、iptables 和 ip_forward，且在大多数设备上仍然不可用。 | 需要 `--network host` 才能上网；真正的带互联网访问的网络隔离在 Android 上通常无法可靠工作。 | 无（没有网络命名空间） | 无（没有网络命名空间） |
 | **硬件与原生 GPU 直通** | **完全（一键开关）。Adreno Turnip、USB、传感器、网络接口、块设备。完整的 `systemd-udevd` 支持，如同真正的 Linux PC。** | 手动绑定挂载，无 udev | 手动绑定挂载，无 udev | 手动绑定挂载，无 udev | 无 |

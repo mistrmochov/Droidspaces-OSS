@@ -3,7 +3,7 @@
 # This script starts the Droidspaces daemon as early as possible during boot.
 
 MODDIR=${0%/*}
-DROIDSPACE_DIR=/data/local/Droidspaces
+DROIDSPACE_DIR=/mnt/meow/Droidspaces
 LOGS_DIR=${DROIDSPACE_DIR}/Logs
 LOGS_FILE=${LOGS_DIR}/boot-module.log
 DROIDSPACE_BINARY=${DROIDSPACE_DIR}/bin/droidspaces

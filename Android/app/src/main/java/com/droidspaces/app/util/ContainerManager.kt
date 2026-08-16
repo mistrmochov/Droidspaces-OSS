@@ -196,7 +196,7 @@ object ContainerManager {
                     return@forEach
                 }
 
-                // Extract sanitized container name from path: /data/local/Droidspaces/Containers/name/
+                // Extract sanitized container name from path: /mnt/meow/Droidspaces/Containers/name/
                 val sanitizedName = trimmed
                     .removeSuffix("/")
                     .substringAfterLast("/")
